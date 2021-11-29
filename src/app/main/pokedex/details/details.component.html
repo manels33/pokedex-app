@@ -1,0 +1,16 @@
+<div *ngIf="pokemonData">
+  <mat-card  class="pokemon-card">
+    <mat-card-title>{{pokemonData.name}}</mat-card-title>
+    <mat-card-subtitle>
+      <ul>
+        <li *ngFor="let type of pokemonData.types">{{type.type.name}}</li>
+      </ul>
+      <h3>Weight: {{pokemonData.weight}} Kg</h3>
+      <h3>Height: {{pokemonData.height}} Kg</h3>
+    </mat-card-subtitle>
+    <img mat-card-image src="{{pokemonData.image}}" alt="">
+    <mat-card-content>
+      <app-chart [stats]="pokemonData.stats" [pokemonName]="pokemonData.name" ></app-chart>
+    </mat-card-content>
+  </mat-card>
+</div>

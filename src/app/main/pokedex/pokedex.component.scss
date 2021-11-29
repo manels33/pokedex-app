@@ -1,0 +1,47 @@
+@import 'src/assets/styles/variables';
+
+.main{
+    max-width: 90%;
+    margin: 50px auto 0;
+    box-shadow: 1px 1px 1px 0, 0, 0, 0.4;
+    padding: 25px;
+    background: $lightGrey;
+    table{
+        width: 100%;
+        text-align: center;
+        tr{
+            &:hover{
+                background: $blueGrey;
+            }
+            th {
+                text-align: center;
+                background: $blue;
+                color: white;
+                &:first-child{
+                    text-align: left;
+                }
+                &:last-child{
+                    text-align: right;
+                    padding-right: 60px;
+                }
+            }
+            td{
+                &:first-child{
+                    text-align: left ;
+                }
+                &:last-child{
+                    padding-right: 30px;
+                    text-align: right;
+                }
+                button{
+                    background: $blue;
+                    border: none;
+                    color: white;
+                    padding: 10px 15px;
+                    border-radius: 9px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
